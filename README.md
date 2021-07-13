@@ -12,7 +12,7 @@ Ingresar por consola a la carpeta del proyecto y ejecutar el siguiente codigo
 
 Metodo por IDE::
 Ejecutar la clase DemoApplication
-# Detalle de la solucion
+# Detalle de la solución
 Para consultar la Api de mercado libre se utilizo una clase RestTemplate de la libreria sprintboot web client, ademas, para crear las urls se utilizo una clase UriComponent (sprintboot web utils).
 Se crearon varios dtos para traer los datos que solo serían de utilidad para el ejercicio
 Los serviciós son los que crean en gran parte la solución y los que implementan alguna algoritmia para la manipulación de datos

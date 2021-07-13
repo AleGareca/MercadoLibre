@@ -15,10 +15,6 @@ import java.util.stream.Collectors;
 public class ProductService {
     private MercadoLibreTemplateRest ml = new MercadoLibreTemplateRest();
 
-    public  int getPromedioPrecio(Products products) {
-    return products.generatePomerido();
-    }
-
     public Products getProductsByIdCategory(String idCategory) {
 
         return ml.getProductsByIdCategory(idCategory);

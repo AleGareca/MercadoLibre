@@ -11,9 +11,6 @@ public class Products implements Serializable {
     private Paginate paging;
     private ArrayList<Product> results;
 
-    public int generatePomerido() {
-       return results.stream().mapToInt(product -> product.getPrice()).sum() / results.size();
-    }
 
     public ArrayList<String> getAllMark() {
         ArrayList<String> rest= new ArrayList<String>();

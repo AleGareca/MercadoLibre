@@ -32,7 +32,5 @@ public class Product implements Serializable {
         }
         return res;
     }
-    public void printData() {
-        System.out.println(price);
-    }
+
 }

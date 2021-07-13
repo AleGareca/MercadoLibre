@@ -10,7 +10,7 @@ import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
 @Component
-class ProcessOrchestrator{
+public class ProcessOrchestrator {
 
 
     @Autowired
@@ -28,5 +28,4 @@ class ProcessOrchestrator{
         //Productos de una marca y nuevos
         productService.getPromedioAllProductById(idCategory);
     }
-
 }

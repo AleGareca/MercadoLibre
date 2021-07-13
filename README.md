@@ -18,6 +18,8 @@ Se crearon varios dtos para traer los datos que solo serían de utilidad para el
 Los serviciós son los que crean en gran parte la solución y los que implementan alguna algoritmia para la manipulación de datos
 El promedio de todas las marcas de motos se realiza mediante paralelismo al tener que buscar en la api toda la información relacionada a una marca de moto en específico 
 
+![Diagram](https://user-images.githubusercontent.com/37850570/125517030-1e009b5e-414e-4a85-9ff1-921495db6205.png)
+
 # Requerimientos
 Se solicita crear un programa que liste marcas de motos, junto al precio promedio de todas las motos publicadas en mercadolibre para cada marca. Para ello se utilizará la api publica de mercadolibre.
 Los pasos a realizar son los siguientes:
@@ -34,3 +36,5 @@ Para el cálculo de este promedio solo deben utilizarse las motos que sean nueva
 Mercadolibre devuelve la información paginada (paginar hasta el registro 900), llamar a cada página de forma secuencial se considera una solución correcta pero se valora el uso de paralelismo.
 Imprimir por consola una lista de marcas de motos junto con el promedio de precio para cada marca.
 Una vez realizado este ejercicio subirlo a un repositorio público de github (o similar) y enviarnos la URL. También sirve que nos mandes el archivo comprimido con el proyecto, sin embargo también en este caso manda un mail sin adjunto avisando, por las dudas al mail con adjunto lo filtre el antivirus.
+
+

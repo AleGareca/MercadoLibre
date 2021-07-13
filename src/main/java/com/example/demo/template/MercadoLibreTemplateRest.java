@@ -7,11 +7,13 @@ import com.example.demo.dto.Products;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.ArrayList;
+@Component
 public class MercadoLibreTemplateRest {
 
     public UriComponents getQueryResponseAll(String path){

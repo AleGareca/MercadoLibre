@@ -4,12 +4,16 @@ import com.example.demo.dto.Category;
 import com.example.demo.dto.ChildrenCategory;
 import com.example.demo.template.MercadoLibreTemplateRest;
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
 @Data
+@Service
 public class CategoryService {
-    private MercadoLibreTemplateRest ml = new MercadoLibreTemplateRest() ;
+    @Autowired
+    private MercadoLibreTemplateRest ml;
     private ArrayList<Category> categories;
 
     public Category findCategoryByName(String nameCategory){

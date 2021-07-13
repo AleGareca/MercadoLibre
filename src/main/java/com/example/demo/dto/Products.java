@@ -13,7 +13,7 @@ public class Products implements Serializable {
 
 
     public ArrayList<String> getAllMark() {
-        ArrayList<String> rest= new ArrayList<String>();
+        ArrayList<String> rest= new ArrayList<>();
         for(Product p: results){
             if(!rest.contains(p.getMark())){
                 rest.add(p.getMark());

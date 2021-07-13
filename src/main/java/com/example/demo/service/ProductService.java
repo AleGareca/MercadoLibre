@@ -4,16 +4,17 @@ import com.example.demo.dto.Product;
 import com.example.demo.dto.Products;
 import com.example.demo.template.MercadoLibreTemplateRest;
 import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.stream.Collectors;
+
 
 @Data
-@Slf4j
+@Service
 public class ProductService {
-    private MercadoLibreTemplateRest ml = new MercadoLibreTemplateRest();
+    @Autowired
+    private MercadoLibreTemplateRest ml;
 
     public Products getProductsByIdCategory(String idCategory) {
 

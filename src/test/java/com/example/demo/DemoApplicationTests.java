@@ -14,8 +14,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class DemoApplicationTests {
 	@Autowired
-	MercadoLibreTemplateRest ml;
-	@Autowired
 	CategoryService service;
 	@Autowired
 	ProductService productService;

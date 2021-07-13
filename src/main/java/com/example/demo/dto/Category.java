@@ -15,7 +15,8 @@ public class Category implements Serializable {
 
     public boolean isCategoryName(String name){
         List<String> items = Arrays.asList(this.name.split("\\s*[,y]\\s*"));
-        return items.stream().anyMatch(e -> e.equals(name));
+        boolean value = items.stream().anyMatch(e -> e.equals(name));
+        return value;
     }
 
 }

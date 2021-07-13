@@ -5,7 +5,6 @@ import com.example.demo.dto.ChildrenCategory;
 import com.example.demo.template.MercadoLibreTemplateRest;
 import lombok.Data;
 
-import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 
 @Data
@@ -16,11 +15,11 @@ public class CategoryService {
     public Category findCategoryByName(String nameCategory){
         this.setCategories(ml.getAllCategory());
         Category category = this.categories.stream().filter(e->e.isCategoryName(nameCategory)).findFirst().get();
-        category.setChildren_categories((ml.getChildenCategory(category.getId())));
+        category.setChildren_categories((getChildrenCategory(category.getId())));
         return category;
     }
 
-    public ArrayList<ChildrenCategory> getChildenCategory(String id) {
+    public ArrayList<ChildrenCategory> getChildrenCategory(String id) {
         return ml.getChildenCategory(id);
     }
 

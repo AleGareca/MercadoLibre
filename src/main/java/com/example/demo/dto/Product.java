@@ -22,6 +22,16 @@ public class Product implements Serializable {
     return count == 2;
     }
 
+    public String getMark(){
+        String res = "";
+        for(Attribute a:attributes){
+            if(a.getId().equals("BRAND")){
+                res = a.getValue_name();
+                break;
+            }
+        }
+        return res;
+    }
     public void printData() {
         System.out.println(price);
     }

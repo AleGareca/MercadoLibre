@@ -32,6 +32,16 @@ public class MercadoLibreTemplateRest {
                 .build();
         return(uri);
     }
+    private UriComponents getQueryResponseWithParamAndPaginate(String path, String category, String idCategory, String offset, String num) {
+        UriComponents uri = UriComponentsBuilder.newInstance()
+                .scheme("https")
+                .host("api.mercadolibre.com/")
+                .path(path)
+                .queryParam(offset,num)
+                .queryParam(category,idCategory)
+                .build();
+        return(uri);
+    }
     public ArrayList<Category> getAllCategory(){
         RestTemplate restTemplate = new RestTemplate();
         UriComponents uri = getQueryResponseAll("sites/MLA/categories");
@@ -57,6 +67,17 @@ public class MercadoLibreTemplateRest {
     public Products getProductsByIdCategory(String idCategory) {
         RestTemplate restTemplate = new RestTemplate();
         UriComponents uri = getQueryResponseWithParam("sites/MLA/search","category",idCategory);
+        ResponseEntity<Products> res = restTemplate.exchange(
+                uri.toString(),
+                HttpMethod.GET,
+                null,
+                new ParameterizedTypeReference<Products>() {});
+        return res.getBody();
+    }
+
+    public Products getProductsByIdAndOffset(String idCategory, int num) {
+        RestTemplate restTemplate = new RestTemplate();
+        UriComponents uri = getQueryResponseWithParamAndPaginate("sites/MLA/search","category",idCategory,"search_type","scan");
         ResponseEntity<Products> res = restTemplate.exchange(
                 uri.toString(),
                 HttpMethod.GET,

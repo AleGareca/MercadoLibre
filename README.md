@@ -12,6 +12,11 @@ Ingresar por consola a la carpeta del proyecto y ejecutar el siguiente codigo
 
 Metodo por IDE::
 Ejecutar la clase DemoApplication
+# Detalle de la solucion
+Para consultar la Api de mercado libre se utilizo una clase RestTemplate de la libreria sprintboot web client, ademas, para crear las urls se utilizo una clase UriComponent (sprintboot web utils).
+Se crearon varios dtos para traer los datos que solo serían de utilidad para el ejercicio
+Los serviciós son los que crean en gran parte la solución y los que implementan alguna algoritmia para la manipulación de datos
+El promedio de todas las marcas de motos se realiza mediante paralelismo al tener que buscar en la api toda la información relacionada a una marca de moto en específico 
 
 # Requerimientos
 Se solicita crear un programa que liste marcas de motos, junto al precio promedio de todas las motos publicadas en mercadolibre para cada marca. Para ello se utilizará la api publica de mercadolibre.

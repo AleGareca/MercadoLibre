@@ -13,19 +13,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class DemoApplicationTests {
-	@Autowired
-	CategoryService service;
-	@Autowired
-	ProductService productService;
-	@Test
+
 	void contextLoads() {
 
-		Category category = service.findCategoryByName("Motos");
-		//obtener el ID
-		String idCategory = service.getChildrenCategoryByName(category, "Motos").getId();
-		//Productos de la categoria
-		Products products = productService.getProductsByIdCategory(idCategory);
-		//Productos de una marca y nuevos
-		productService.getPromedioAllProductById(idCategory);
 	}
 }

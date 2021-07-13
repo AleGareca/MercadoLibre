@@ -69,9 +69,9 @@ public class ProductService {
 
     public void getPromedioAllProductById(String idCategory) {
         ArrayList<String> marcas = getAllMark(idCategory);
-        for (String m:marcas){
-            System.out.println("Marca ::"+m+ " |Promedio total:: $"+getPromedioAllProductByMarkAndStatus(m,"Nuevo",idCategory));
-        }
+        marcas.parallelStream().forEach(m -> { System.out.println("Marca ::"+m+ " |Promedio total:: $"+getPromedioAllProductByMarkAndStatus(m,"Nuevo",idCategory));
+        });
+
     }
 
 }

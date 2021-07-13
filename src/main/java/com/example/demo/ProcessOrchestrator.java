@@ -18,7 +18,6 @@ public class ProcessOrchestrator {
     @Autowired
     ProductService productService;
 
-    @EventListener(ApplicationReadyEvent.class)
     public void calculateMean() {
         Category category = service.findCategoryByName("Motos");
         //obtener el ID

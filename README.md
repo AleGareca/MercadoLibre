@@ -1,4 +1,19 @@
 # MercadoLibre
+
+# Ejecucion del proyeto
+Se necesita JDK 11
+
+Clonar el repositorio 
+-git clone https://github.com/AleGareca/MercadoLibre.git
+
+Metodo por consola::
+Ingresar por consola a la carpeta del proyecto y ejecutar el siguiente codigo
+-mvn spring-boot:run
+
+Metodo por IDE::
+Ejecutar la clase DemoApplication
+
+# Requerimientos
 Se solicita crear un programa que liste marcas de motos, junto al precio promedio de todas las motos publicadas en mercadolibre para cada marca. Para ello se utilizará la api publica de mercadolibre.
 Los pasos a realizar son los siguientes:
 
